@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "active": true,
+    "pair": "AUD/JPY",
+    "direction": "BUY",
+    "entry_price": 112.459,
+    "signal_price": 112.286,
+    "stop_loss": 112.241,
+    "take_profit": 113.984,
+    "strategy": "逆H&S 4h",
+    "entry_time": "2026-03-19T09:06:06.707096+09:00",
+    "breakeven_done": false,
+    "trade_id": "93"
+  },
+  {
+    "active": true,
+    "pair": "AUD/JPY",
+    "direction": "BUY",
+    "entry_price": 112.474,
+    "signal_price": 112.286,
+    "stop_loss": 112.241,
+    "take_profit": 113.984,
+    "strategy": "逆H&S 4h",
+    "entry_time": "2026-03-19T09:16:09.560943+09:00",
+    "breakeven_done": false,
+    "trade_id": "97"
+  }
+]
