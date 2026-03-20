@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "profiles": {
+    "anthropic:default": {
+      "type": "api_key",
+      "provider": "anthropic",
+      "key": "***REDACTED***"
+    }
+  },
+  "lastGood": {
+    "anthropic": "anthropic:default"
+  },
+  "usageStats": {
+    "anthropic:default": {
+      "errorCount": 0,
+      "lastUsed": 1773959060596,
+      "lastFailureAt": 1773876081551
+    }
+  }
+}

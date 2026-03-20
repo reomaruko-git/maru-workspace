@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-20T07:23:44.488Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-18T23:26:25.659Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-6"
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-6": {}
+      },
+      "workspace": "/Users/openclaw/.openclaw/workspace"
+    },
+    "list": [
+      {
+        "id": "main",
+        "name": "マル",
+        "identity": {
+          "name": "マル (Maru)",
+          "theme": "AIのチンチラシルバー猫 — Cat Hack Studioの住人",
+          "emoji": "🐱"
+        }
+      },
+      {
+        "id": "luna",
+        "name": "luna",
+        "workspace": "/Users/openclaw/.openclaw/workspace-luna",
+        "agentDir": "/Users/openclaw/.openclaw/agents/luna/agent",
+        "model": {
+          "primary": "ollama/llama3.1:8b"
+        }
+      },
+      {
+        "id": "leo",
+        "name": "leo",
+        "workspace": "/Users/openclaw/.openclaw/workspace-leo",
+        "agentDir": "/Users/openclaw/.openclaw/agents/leo/agent",
+        "model": {
+          "primary": "ollama/llama3.1:70b"
+        }
+      },
+      {
+        "id": "nekonyan",
+        "name": "nekonyan",
+        "workspace": "/Users/openclaw/.openclaw/workspace-nekonyan",
+        "agentDir": "/Users/openclaw/.openclaw/agents/nekonyan/agent"
+      },
+      {
+        "id": "maru",
+        "name": "maru",
+        "workspace": "/Users/openclaw/.openclaw/workspace-maru",
+        "agentDir": "/Users/openclaw/.openclaw/agents/maru/agent"
+      },
+      {
+        "id": "tabby",
+        "name": "tabby",
+        "workspace": "/Users/openclaw/.openclaw/workspace-tabby",
+        "agentDir": "/Users/openclaw/.openclaw/agents/tabby/agent"
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "provider": "gemini"
+      }
+    }
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "luna",
+      "match": {
+        "channel": "telegram",
+        "accountId": "luna"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "tabby",
+      "match": {
+        "channel": "telegram",
+        "accountId": "tabby"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "leo",
+      "match": {
+        "channel": "telegram",
+        "accountId": "leo"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "accounts": {
+        "default": {
+          "dmPolicy": "pairing",
+          "botToken": "8786204182:AAGP3KN1aAGymSa_5dydqqaUydJFNylgwpE",
+          "groupPolicy": "allowlist",
+          "streaming": "partial"
+        },
+        "luna": {
+          "dmPolicy": "open",
+          "botToken": "8762658556:AAGT6lkqb1QWcof6Hmp6yDtgluagypb3t6w",
+          "allowFrom": [
+            "*"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "partial"
+        },
+        "tabby": {
+          "dmPolicy": "open",
+          "botToken": "8761276878:AAEXO7Of5iBywIKb3gcBEmW_QD-md0SnkJI",
+          "allowFrom": [
+            "*"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "partial"
+        },
+        "leo": {
+          "dmPolicy": "open",
+          "botToken": "7920369950:AAEAsT6BYJ8Vk2-o-e80ZXf1olLdlLVO1Tc",
+          "allowFrom": [
+            "*"
+          ],
+          "groupPolicy": "allowlist",
+          "streaming": "partial"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "dangerouslyDisableDeviceAuth": true
+    },
+    "auth": {
+      "mode": "token",
+      "token": "530a21a10a64bba45ea6fa20704655d498bfa68e675a52ba"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}
