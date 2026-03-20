@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.13",
-    "lastTouchedAt": "2026-03-20T07:23:44.488Z"
+    "lastTouchedAt": "2026-03-20T08:23:38.117Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-18T23:26:25.659Z",
@@ -44,6 +44,11 @@
         "agentDir": "/Users/openclaw/.openclaw/agents/luna/agent",
         "model": {
           "primary": "ollama/llama3.1:8b"
+        },
+        "tools": {
+          "deny": [
+            "web_fetch"
+          ]
         }
       },
       {
@@ -53,6 +58,11 @@
         "agentDir": "/Users/openclaw/.openclaw/agents/leo/agent",
         "model": {
           "primary": "ollama/llama3.1:70b"
+        },
+        "tools": {
+          "deny": [
+            "web_fetch"
+          ]
         }
       },
       {
@@ -142,7 +152,7 @@
           "streaming": "partial"
         },
         "luna": {
-          "dmPolicy": "open",
+          "dmPolicy": "pairing",
           "botToken": "8762658556:AAGT6lkqb1QWcof6Hmp6yDtgluagypb3t6w",
           "allowFrom": [
             "*"
@@ -151,7 +161,7 @@
           "streaming": "partial"
         },
         "tabby": {
-          "dmPolicy": "open",
+          "dmPolicy": "pairing",
           "botToken": "8761276878:AAEXO7Of5iBywIKb3gcBEmW_QD-md0SnkJI",
           "allowFrom": [
             "*"
@@ -160,7 +170,7 @@
           "streaming": "partial"
         },
         "leo": {
-          "dmPolicy": "open",
+          "dmPolicy": "pairing",
           "botToken": "7920369950:AAEAsT6BYJ8Vk2-o-e80ZXf1olLdlLVO1Tc",
           "allowFrom": [
             "*"
@@ -187,15 +197,7 @@
       "resetOnExit": false
     },
     "nodes": {
-      "denyCommands": [
-        "camera.snap",
-        "camera.clip",
-        "screen.record",
-        "contacts.add",
-        "calendar.add",
-        "reminders.add",
-        "sms.send"
-      ]
+      "denyCommands": []
     }
   },
   "plugins": {
