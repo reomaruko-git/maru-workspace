@@ -52,6 +52,17 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - `trash` > `rm` (recoverable beats gone forever)
 - When in doubt, ask.
 
+## コードや作業指示の送り先ルール
+
+コード・設定変更・作業指示をNAOKOさんに送る場合は、**必ずWebchat（admin）にも送ること**。
+
+理由：NAOKOさんが実際に操作するのはWebchat側のため、Telegramのみに送ると二度手間になる。
+
+- ✅ コードスニペット → Webchat に送る
+- ✅ 設定変更の手順 → Webchat に送る
+- ✅ 確認が必要な作業指示 → Webchat に送る
+- Telegramへの通知は「報告・アラート」用途に限定する
+
 ## External vs Internal
 
 **Safe to do freely:**
