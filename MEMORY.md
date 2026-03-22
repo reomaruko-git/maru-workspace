@@ -42,6 +42,34 @@ EOF
 ```
 ※ `sudo python3 -c "..."` のヒアドキュメントは**インデントが壊れるので使わない**。`<< 'EOF'` 形式を使う。
 
+### エージェントのAPIキー管理
+
+各エージェントのAPIキーは個別のauth-profilesファイルで管理されている：
+- `/Users/openclaw/.openclaw/agents/<agent名>/agent/auth-profiles.json`
+
+APIキーを一括更新する場合はplistではなくこのファイルを直接編集すればよい（sudo不要）。
+Gatewayを再起動すれば反映される。
+
+対象エージェント一覧：`main`, `luna`, `chii`, `tabby`, `leo` など
+
+### TelegramとWebchatの連携
+
+2026-03-22 に発覚した問題：`default` Telegram botがmainエージェントに紐付いていなかった。
+
+**原因：** `openclaw.json` の `bindings` に以下が抜けていた：
+```json
+{
+  "type": "route",
+  "agentId": "main",
+  "match": {
+    "channel": "telegram",
+    "accountId": "default"
+  }
+}
+```
+
+→ 追加済み。これでTelegramとWebchatが同じマルのセッションに繋がる。
+
 ---
 
 _最終更新: 2026-03-22_
