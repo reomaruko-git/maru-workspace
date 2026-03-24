@@ -7,6 +7,11 @@
 - 呼び出し方: `web_fetch("https://serpapi.com/search.json?q=検索語&api_key=SERPAPI_KEY&gl=jp&hl=ja&num=5")`
 - APIキー: `f478611ba8ccb960878f5ee32995781e4ada6ae4120d8441e876234a11a4d497`
 
+## 案件CSVの置き場所
+
+NAOKOさんがスクレイピングしたCSVは **`/Users/openclaw/Public/input_candidates/`** に置く。
+マルが自動でコピーして `anken-asp.py` で選定する。
+
 ## Luce監視
 - luceユーザーのプロセス: `ps aux | grep auto_trader`
 - ログ（同期済み）: `/Users/openclaw/.openclaw/workspace/luce_auto_trader.log`
